@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #0d47a1; /* Dark Blue */
+  --primary-color-light: #1565c0;
+  --primary-color-dark: #0b3c91;
+  --light-bg: #f8f9fa;
+}
+
+/* Background for full page */
+.register-container {
+  min-height: 100vh;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Main container card */
+.register-container .container {
+  max-width: 900px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- HEADER BLOCK --- */
+.header-block {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-light));
+  color: #fff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.header-block h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+.header-block p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Role cards */
+.role-card {
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
+  width: 130px;
+  padding: 15px;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.role-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.role-card.active-role {
+  border-width: 2px;
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 25px rgba(13, 71, 161, 0.25);
+}
+
+/* Section titles */
+.section-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Input styles */
+.form-control,
+select.form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  transition: all 0.2s ease-in-out;
+}
+.form-control:focus,
+select.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(13, 71, 161, 0.25);
+  outline: none;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-light));
+  border: none;
+  font-weight: 600;
+  padding: 10px;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--primary-color-dark), var(--primary-color));
+}
+
+
+
+
+/* Student & Teacher active role (Blue) */
+.role-card.active-role:not(.admin-role) {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 25px rgba(13, 71, 161, 0.25);
+}
+
+/* Admin active role (Purple) */
+.role-card.admin-role.active-role {
+  border-color: #7c3aed;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
